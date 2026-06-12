@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+>
+    <ui:VisualElement name="DarkOverlay" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(5, 5, 10, 0.90); align-items: center; justify-content: center;">
+        <ui:VisualElement name="PausePanel" style="width: 500px; padding: 40px; background-color: rgb(5, 5, 10); border-radius: 15px; border-width: 3px; border-color: #39ff14; flex-direction: column; align-items: center; justify-content: center;">
+            <ui:Label text="ПАУЗА" style="color: #ff073a; font-size: 48px; -unity-font-style: bold; margin-bottom: 40px; -unity-text-align: middle-center;" />
+            <ui:VisualElement style="width: 100%; margin-bottom: 50px;">
+                <ui:VisualElement style="flex-direction: row; align-items: center; margin-bottom: 30px; justify-content: space-between;">
+                    <ui:Label text="Музыка" style="color: #39ff14; width: 180px; font-size: 24px; -unity-font-style: bold;" />
+                    <ui:Slider name="VolumeBGMSlider" low-value="0" high-value="1" value="1" style="flex-grow: 1; height: 30px; color: #39ff14;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-between;">
+                    <ui:Label text="Звуковые эффекты" style="color: #ff073a; width: 180px; font-size: 18px; -unity-font-style: bold; white-space: normal;" />
+                    <ui:Slider name="VolumeSFXSlider" low-value="0" high-value="1" value="1" style="flex-grow: 1; height: 30px; color: #ff073a;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Button name="ResumeButton" text="ПРОДОЛЖИТЬ" style="height: 60px; width: 350px; margin-bottom: 20px; font-size: 28px; -unity-font-style: bold; background-color: rgb(5, 5, 10); color: #39ff14; border-width: 2px; border-color: #39ff14; border-radius: 10px;" />
+            <ui:Button name="MenuButton" text="ГЛАВНОЕ МЕНЮ" style="height: 60px; width: 350px; font-size: 28px; -unity-font-style: bold; background-color: rgb(5, 5, 10); color: #ff073a; border-width: 2px; border-color: #ff073a; border-radius: 10px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

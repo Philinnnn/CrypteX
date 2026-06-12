@@ -1,0 +1,33 @@
+﻿%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!612131651 &11400000
+VisualTreeAsset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LevelSelect
+  m_Uss: []
+  m_InlineSheet: {fileID: 0}
+  m_TemplateAsset: {fileID: 0}
+  m_Stylesheet: {fileID: 0}
+  m_BaseAssets: []
+  m_ReferencedAssets: []
+  m_Contents: '<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="False"><ui:VisualElement name="Root" style="flex-grow:
+    1; align-items: center; justify-content: center; background-image: url(''project://database/Assets/UI/Menu/Background.png?fileID=2800000&amp;guid=cff2c21f3d854444e87d4cd7b0fd8263&amp;type=3#Background'');
+    width: 100%; height: 100%;"><ui:VisualElement name="Panel" style="background-color:
+    rgba(0, 0, 0, 0.9); border-radius: 20px; padding: 40px; flex-direction: column;
+    align-items: center; justify-content: center; gap: 20px; width: 800px; max-height:
+    80%; overflow: hidden;"><ui:Label text="ВЫБОР УРОВНЯ" name="Title" style="font-size:
+    48px; color: rgb(97, 223, 235); -unity-font-style: bold; -unity-text-align:
+    middle-center; margin-bottom: 20px;"/><ui:ScrollView name="LevelsScroll" style="flex-grow:
+    1; width: 100%; max-height: 600px;"><ui:VisualElement name="LevelsContainer"
+    style="flex-direction: row; flex-wrap: wrap; gap: 10px; justify-content: center;
+    padding: 10px;"/></ui:ScrollView><ui:Button text="Назад" name="BackButton"
+    style="padding: 15px 40px; font-size: 20px; background-color: rgb(97, 223,
+    235); color: rgb(0, 0, 0); border-radius: 10px; margin-top: 20px;"/></ui:VisualElement></ui:VisualElement></ui:UXML>'
+  m_TemplateContents: 
+  m_StyleSheets: []
+

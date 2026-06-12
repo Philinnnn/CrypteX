@@ -1,0 +1,13 @@
+﻿<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 1; align-items: center; justify-content: center; background-image: url(&quot;project://database/Assets/UI/Menu/Background.png?fileID=2800000&amp;guid=cff2c21f3d854444e87d4cd7b0fd8263&amp;type=3#Background&quot;);">
+        <ui:VisualElement name="Panel" style="background-color: rgba(0, 0, 0, 0.8); border-radius: 20px; padding: 40px; flex-direction: column; align-items: center; justify-content: center; gap: 30px; width: 600px;">
+            <ui:Label text="УРОВЕНЬ ПРОЙДЕН" name="Title" style="font-size: 48px; color: rgb(97, 223, 235); -unity-font-style: bold; -unity-text-align: middle-center;"/>
+            <ui:Label text="Отлично сработал! Готов к следующему вызову?" name="Message" style="font-size: 24px; color: rgb(200, 200, 200); -unity-text-align: middle-center; white-space: normal; width: 100%;"/>
+            <ui:VisualElement name="Buttons" style="flex-direction: row; gap: 20px; justify-content: center; width: 100%;">
+                <ui:Button text="Меню" name="MenuButton" style="padding: 15px 30px; font-size: 20px; background-color: rgb(97, 223, 235); color: rgb(0, 0, 0); border-radius: 10px; flex-grow: 1;"/>
+                <ui:Button text="Дальше" name="NextButton" style="padding: 15px 30px; font-size: 20px; background-color: rgb(0, 200, 150); color: rgb(0, 0, 0); border-radius: 10px; flex-grow: 1;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
+

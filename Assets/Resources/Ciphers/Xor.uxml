@@ -1,0 +1,78 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 1; background-image: url('project://database/Assets/UI/Gameplay/Background.png'); align-items: center; justify-content: center;">
+        <ui:VisualElement name="Tablet" style="flex-grow: 1; background-image: url('project://database/Assets/UI/Gameplay/Tablet.png'); align-items: center; justify-content: center; width: 100%; height: 100%;">
+            <ui:VisualElement name="TabletGameArea" style="flex-grow: 0; align-items: center; justify-content: flex-start; width: 1500px; max-width: 1500px; height: auto; padding: 20px 40px; flex-direction: column; scale: 0.75 0.75;">
+                <ui:Label text="ОШИБКА СИСТЕМЫ: ЛОГИЧЕСКИЙ ВЕНТИЛЬ XOR" style="font-size: 28px; color: rgb(235, 97, 97); -unity-font-style: bold; margin-bottom: 20px; letter-spacing: 2px;" />
+                <ui:Button name="InfoButton" text="ИНСТРУКЦИЯ (XOR)" style="padding: 10px 20px; font-size: 16px; background-color: rgb(235, 97, 97); color: black; border-radius: 8px; -unity-font-style: bold; margin-bottom: 10px;" />
+                <ui:Label name="StepTitle" text="ЭТАП 1 / 3: ДВОИЧНЫЕ ДАННЫЕ" style="font-size: 22px; color: rgb(200, 200, 200); -unity-font-style: bold; margin-bottom: 20px; letter-spacing: 2px;" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center; background-color: rgba(0,0,0,0.4); padding: 50px; border-radius: 15px; border-width: 2px; border-color: rgb(70, 70, 70); margin-bottom: 30px;">
+                    <ui:VisualElement style="align-items: center; margin-right: 40px;">
+                        <ui:Label text="ДАННЫЕ" style="font-size: 16px; color: rgb(150, 150, 150); margin-bottom: 10px;" />
+                        <ui:Label name="DataLabel" text="10101010" style="font-size: 60px; color: rgb(255, 255, 255); -unity-font-style: bold; letter-spacing: 10px;" />
+                    </ui:VisualElement>
+                    <ui:Label text="⊕" style="font-size: 60px; color: rgb(235, 97, 97); -unity-font-style: bold; margin-right: 40px;" />
+                    <ui:VisualElement style="align-items: center; margin-right: 40px;">
+                        <ui:Label text="КЛЮЧ" style="font-size: 16px; color: rgb(150, 150, 150); margin-bottom: 10px;" />
+                        <ui:Label name="KeyLabel" text="01011010" style="font-size: 60px; color: rgb(255, 200, 50); -unity-font-style: bold; letter-spacing: 10px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                
+                <ui:VisualElement style="align-items: center; margin-bottom: 30px;">
+                    <ui:Label text="РЕЗУЛЬТАТ" style="font-size: 16px; color: rgb(150, 150, 150); margin-bottom: 15px;" />
+                    <ui:Label name="AnswerText" text="" style="font-size: 70px; color: rgb(97, 223, 235); -unity-font-style: bold; letter-spacing: 10px; min-width: 400px; height: 90px; border-bottom-width: 4px; border-bottom-color: rgb(97, 223, 235); -unity-text-align: middle-center;" />
+                </ui:VisualElement>
+                
+                <ui:VisualElement name="ActionButtons" style="flex-direction: row; justify-content: center; align-items: center; width: 100%; margin-top: 10px;">
+                    <ui:Button name="DeleteButton" text="← СТЕРЕТЬ" style="padding: 15px 35px; font-size: 20px; background-color: rgb(200, 100, 100); color: white; border-radius: 8px; -unity-font-style: bold; margin-right: 20px;" />
+                    <ui:Button name="SubmitButton" text="ОТПРАВИТЬ" style="padding: 15px 45px; font-size: 22px; background-color: rgb(235, 97, 97); color: black; border-radius: 8px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CheatSheetOverlay" style="position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); display: none; align-items: center; justify-content: center; z-index: 100;">
+                <ui:VisualElement style="background-color: rgb(40, 40, 40); border-width: 2px; border-color: rgb(235, 97, 97); border-radius: 15px; padding: 40px; width: 80%; max-width: 1000px; align-items: center;">
+                    <ui:Label text="ЛОГИЧЕСКОЕ ИСКЛЮЧАЮЩЕЕ ИЛИ (XOR)" style="font-size: 24px; color: rgb(235, 97, 97); -unity-font-style: bold; margin-bottom: 20px;" />
+                    
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-around; width: 100%; margin-bottom: 10px;">
+                        <ui:VisualElement style="align-items: center; background-color: rgba(97, 223, 235, 0.1); padding: 15px 25px; border-radius: 8px; border-width: 2px; border-color: rgb(97, 223, 235);">
+                            <ui:Label text="0 ⊕ 0 = 0" style="font-size: 22px; color: rgb(200,200,200); -unity-font-style: bold;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="align-items: center; background-color: rgba(235, 97, 97, 0.2); padding: 15px 25px; border-radius: 8px; border-width: 2px; border-color: rgb(235, 97, 97);">
+                            <ui:Label text="0 ⊕ 1 = 1" style="font-size: 22px; color: rgb(255,255,255); -unity-font-style: bold;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="align-items: center; background-color: rgba(235, 97, 97, 0.2); padding: 15px 25px; border-radius: 8px; border-width: 2px; border-color: rgb(235, 97, 97);">
+                            <ui:Label text="1 ⊕ 0 = 1" style="font-size: 22px; color: rgb(255,255,255); -unity-font-style: bold;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="align-items: center; background-color: rgba(97, 223, 235, 0.1); padding: 15px 25px; border-radius: 8px; border-width: 2px; border-color: rgb(97, 223, 235);">
+                            <ui:Label text="1 ⊕ 1 = 0" style="font-size: 22px; color: rgb(200,200,200); -unity-font-style: bold;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Label text="ОДИНАКОВЫЕ = 0, РАЗНЫЕ = 1" style="font-size: 16px; color: rgb(150, 150, 150); margin-bottom: 25px; -unity-font-style: italic; letter-spacing: 2px;" />
+
+                    <ui:VisualElement style="flex-direction: row; background-color: rgb(30, 30, 30); padding: 15px 30px; border-radius: 8px; margin-bottom: 25px; align-items: center; border-width: 1px; border-color: rgb(100, 100, 100);">
+                        <ui:Label text="СТЕПЕНИ ДВОЙКИ:" style="font-size: 18px; color: rgb(200, 200, 200); margin-right: 20px; -unity-font-style: bold;" />
+                        <ui:Label text="128" style="font-size: 22px; color: rgb(97, 223, 235); margin: 0 10px; -unity-font-style: bold;" />
+                        <ui:Label text="64" style="font-size: 22px; color: rgb(97, 223, 235); margin: 0 10px; -unity-font-style: bold;" />
+                        <ui:Label text="32" style="font-size: 22px; color: rgb(97, 223, 235); margin: 0 10px; -unity-font-style: bold;" />
+                        <ui:Label text="16" style="font-size: 22px; color: rgb(97, 223, 235); margin: 0 10px; -unity-font-style: bold;" />
+                        <ui:Label text="8" style="font-size: 22px; color: rgb(97, 223, 235); margin: 0 10px; -unity-font-style: bold;" />
+                        <ui:Label text="4" style="font-size: 22px; color: rgb(97, 223, 235); margin: 0 10px; -unity-font-style: bold;" />
+                        <ui:Label text="2" style="font-size: 22px; color: rgb(97, 223, 235); margin: 0 10px; -unity-font-style: bold;" />
+                        <ui:Label text="1" style="font-size: 22px; color: rgb(97, 223, 235); margin: 0 10px; -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    
+                    <ui:VisualElement name="BinaryConverterTool" style="margin-bottom: 20px; align-items: center; background-color: rgb(30, 30, 30); padding: 15px; border-radius: 10px; border-width: 1px; border-color: rgb(150,150,150); width: 100%;">
+                        <ui:Label text="КАЛЬКУЛЯТОР ДВОИЧНОЙ СИСТЕМЫ (И ТЕКСТА)" style="font-size: 18px; color: rgb(235, 97, 97); -unity-font-style: bold; margin-bottom: 10px;" />
+                        <ui:VisualElement style="flex-direction: row; align-items: center;">
+                            <ui:TextField name="DecInput" text="" style="width: 150px; font-size: 16px; margin-right: 10px; background-color: white; color: black;" />
+                            <ui:Button name="ConvertToBinButton" text="в Двоичный →" style="font-size: 14px; margin-right: 10px; padding: 5px;" />
+                            <ui:TextField name="BinInput" text="" style="width: 250px; font-size: 16px; margin-right: 10px; background-color: white; color: black;" />
+                            <ui:Button name="ConvertToDecButton" text="← в Десятичный/Текст" style="font-size: 14px; padding: 5px;" />
+                        </ui:VisualElement>
+                        <ui:Label name="ConversionBreakdown" text="Введите число, символ или 8-битный код..." style="font-size: 16px; color: rgb(200, 200, 200); margin-top: 15px; -unity-text-align: middle-center; white-space: normal;" />
+                    </ui:VisualElement>
+
+                    <ui:Button name="CloseInfoButton" text="ЗАКРЫТЬ" style="padding: 15px 40px; font-size: 20px; background-color: rgb(235, 97, 97); color: black; border-radius: 8px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

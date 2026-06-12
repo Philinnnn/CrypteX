@@ -1,0 +1,22 @@
+﻿.cyber-input #unity-text-input {
+    background-color: rgba(5, 15, 5, 0.85);
+    background-image: none;
+    border-color: rgb(97, 235, 97);
+    border-width: 2px;
+    border-radius: 4px;
+    color: rgb(97, 255, 97);
+    font-size: 32px;
+    -unity-font-style: bold;
+    padding: 10px;
+    --unity-selection-color: rgba(97, 255, 97, 0.3);
+}
+
+.cyber-input #unity-text-input:hover {
+    border-color: rgb(150, 255, 150);
+    background-color: rgba(10, 25, 10, 0.9);
+}
+
+.cyber-input #unity-text-input:focus {
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(0, 30, 0, 1);
+}

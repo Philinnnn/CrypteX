@@ -1,0 +1,28 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Gameplay/Background.png?fileID=2800000&amp;guid=b58457c14394ea9439590eeeb6bdabbf&amp;type=3#Background&quot;); align-items: center; justify-content: center;">
+        <ui:VisualElement name="Tablet" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Gameplay/Tablet.png?fileID=6063511624963266046&amp;guid=bfe1bd39c35ea6b45ad6ede54d1144ae&amp;type=3#ChatGPT Image 2 февр. 2026 г., 12_00_03_0&quot;); align-items: center; justify-content: center; width: 100%; height: 100%; max-width: 1920px; max-height: 1080px;">
+            <ui:VisualElement name="TabletGameArea" style="flex-grow: 0; align-items: center; justify-content: flex-start; width: 1500px; max-width: 1500px; height: auto; padding: 50px 40px; flex-direction: column; margin-top: -2%;">
+                <ui:Label text="ЗАШИФРОВАНО:" name="CipherLabel" style="font-size: 20px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-bottom: 10px;"/>
+                <ui:Label text="ЗАШИФРОВАНО" name="EncryptedText" style="align-self: center; color: rgb(97, 223, 235); font-size: 50px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Roboto_Mono/static/RobotoMono-Bold.ttf?fileID=12800000&amp;guid=8683e31c1d654504fac4eeead10e47f3&amp;type=3#RobotoMono-Bold&quot;); letter-spacing: 6px; white-space: normal; margin-bottom: 20px; -unity-text-align: upper-center; max-width: 100%;"/>
+                <ui:Label text="Ввод: печатайте ответ с клавиатуры. Пробел не нужен. Enter — отправить." name="HintLabel" style="font-size: 16px; color: rgba(97, 223, 235, 0.9); margin-bottom: 12px; -unity-text-align: middle-center;"/>
+                <ui:VisualElement name="ControlsRow" style="flex-direction: row; width: 100%; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; padding: 14px 18px; background-color: rgba(0, 0, 0, 0.35); border-radius: 10px;">
+                    <ui:VisualElement name="LeftControls" style="flex-direction: column; align-items: center; min-width: 340px;">
+                        <ui:Label text="РЕЛЬСА" style="font-size: 18px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-bottom: 8px;"/>
+                        <ui:IntegerField label="Старт" name="StartDial" value="1" style="width: 280px; font-size: 26px;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="RightControls" style="flex-direction: column; align-items: center; min-width: 340px;">
+                        <ui:Label text="РАЗМЕР ШАГА" style="font-size: 18px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-bottom: 8px;"/>
+                        <ui:IntegerField label="Шаг" name="StepDial" value="2" style="width: 280px; font-size: 26px;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label text="ВВЕДИТЕ ОТВЕТ:" name="InputLabel" style="font-size: 18px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-top: 10px; margin-bottom: 5px;"/>
+                <ui:Label text="" name="AnswerText" style="font-size: 42px; color: rgb(97, 223, 235); -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Roboto_Mono/static/RobotoMono-Bold.ttf?fileID=12800000&amp;guid=8683e31c1d654504fac4eeead10e47f3&amp;type=3#RobotoMono-Bold&quot;); letter-spacing: 3px; margin-bottom: 20px; min-height: 54px; min-width: 820px; align-self: center; -unity-text-align: middle-center; padding: 10px 18px; background-color: rgba(0, 0, 0, 0.4); border-radius: 10px;"/>
+                <ui:VisualElement name="LettersPanel" style="flex-direction: row; flex-wrap: wrap; justify-content: center; padding: 10px; width: 1494px; margin-bottom: 27px; margin-top: 0;"/>
+                <ui:VisualElement name="ButtonsContainer" style="flex-direction: row; justify-content: center; align-items: center; width: 100%; padding: 16px 20px; background-color: rgba(0, 0, 0, 0.35); border-radius: 10px;">
+                    <ui:Button text="← СТЕРЕТЬ" name="DeleteButton" style="padding: 15px 35px; font-size: 20px; background-color: rgb(200, 100, 100); color: rgb(255, 255, 255); border-radius: 8px; border-top-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-right-width: 2px; border-top-color: rgba(255,255,255,0.55); border-bottom-color: rgba(255,255,255,0.55); border-left-color: rgba(255,255,255,0.55); border-right-color: rgba(255,255,255,0.55); -unity-font-style: bold; margin-right: 20px;"/>
+                    <ui:Button text="ОТПРАВИТЬ" name="SubmitButton" style="padding: 15px 45px; font-size: 22px; background-color: rgb(97, 223, 235); color: rgb(0, 0, 0); border-radius: 8px; border-top-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-right-width: 2px; border-top-color: rgba(255,255,255,0.55); border-bottom-color: rgba(255,255,255,0.55); border-left-color: rgba(255,255,255,0.55); border-right-color: rgba(255,255,255,0.55); -unity-font-style: bold;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

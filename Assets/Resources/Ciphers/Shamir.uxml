@@ -1,0 +1,43 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 1; background-image: url('project://database/Assets/UI/Gameplay/Background.png'); align-items: center; justify-content: center;">
+        <ui:VisualElement name="Tablet" style="flex-grow: 1; background-image: url('project://database/Assets/UI/Gameplay/Tablet.png'); align-items: center; justify-content: center; width: 100%; height: 100%;">
+            <ui:VisualElement name="TabletGameArea" style="flex-grow: 0; align-items: center; justify-content: flex-start; width: 1500px; max-width: 1500px; height: auto; padding: 20px 40px; flex-direction: column; scale: 0.75 0.75;">
+                <ui:Label text="ПРОТОКОЛ ШАМИРА (МАТЕМАТИЧЕСКИЙ ЗАМОК)" style="font-size: 28px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-bottom: 20px; letter-spacing: 2px;" />
+                <ui:Button name="InfoButton" text="ИНСТРУКЦИЯ" style="padding: 10px 20px; font-size: 16px; background-color: rgb(97, 223, 235); color: black; border-radius: 8px; -unity-font-style: bold; margin-bottom: 30px;" />
+                <ui:Label name="StepTitle" text="ЭТАП 1" style="font-size: 22px; color: rgb(200, 200, 200); -unity-font-style: bold; margin-bottom: 20px; letter-spacing: 2px;" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center; background-color: rgba(0,0,0,0.4); padding: 30px; border-radius: 15px; border-width: 2px; border-color: rgb(70, 70, 70); margin-bottom: 30px;">
+                    <ui:VisualElement style="align-items: center; margin-right: 30px;">
+                        <ui:Label text="БЛОК ДАННЫХ" style="font-size: 14px; color: rgb(150, 150, 150); margin-bottom: 10px;" />
+                        <ui:Label name="ValueLabel" text="5" style="font-size: 50px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:Label text="^" style="font-size: 50px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-right: 30px;" />
+                    <ui:VisualElement style="align-items: center; margin-right: 30px;">
+                        <ui:Label text="КЛЮЧ" style="font-size: 14px; color: rgb(150, 150, 150); margin-bottom: 10px;" />
+                        <ui:Label name="KeyLabel" text="3" style="font-size: 50px; color: rgb(255, 200, 50); -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:Label text="mod" style="font-size: 30px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-right: 30px;" />
+                    <ui:VisualElement style="align-items: center; margin-right: 30px;">
+                        <ui:Label text="МОДУЛЬ" style="font-size: 14px; color: rgb(150, 150, 150); margin-bottom: 10px;" />
+                        <ui:Label name="ModLabel" text="11" style="font-size: 50px; color: rgb(255, 100, 100); -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:Label text="=" style="font-size: 50px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-right: 30px;" />
+                    <ui:VisualElement style="align-items: center;">
+                        <ui:Label text="РЕЗУЛЬТАТ" style="font-size: 14px; color: rgb(150, 150, 150); margin-bottom: 10px;" />
+                        <ui:Label name="AnswerText" text="" style="font-size: 50px; color: rgb(97, 223, 235); -unity-font-style: bold; min-width: 80px; border-bottom-width: 3px; border-bottom-color: rgb(97, 223, 235); -unity-text-align: middle-center;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="ActionButtons" style="flex-direction: row; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
+                    <ui:Button name="DeleteButton" text="← СТЕРЕТЬ" style="padding: 15px 35px; font-size: 20px; background-color: rgb(200, 100, 100); color: white; border-radius: 8px; -unity-font-style: bold; margin-right: 20px;" />
+                    <ui:Button name="SubmitButton" text="ОТПРАВИТЬ" style="padding: 15px 45px; font-size: 22px; background-color: rgb(97, 223, 235); color: black; border-radius: 8px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CheatSheetOverlay" style="position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); display: none; align-items: center; justify-content: center; z-index: 100;">
+                <ui:VisualElement style="background-color: rgb(40, 40, 40); border-width: 2px; border-color: rgb(97, 223, 235); border-radius: 15px; padding: 40px; width: 80%; max-width: 1000px; align-items: center;">
+                    <ui:Label text="МАТЕМАТИЧЕСКИЙ ЗАМОК" style="font-size: 24px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-bottom: 20px;" />
+                    <ui:Label text="Возведение сообщения M в степень первого ключа A:&#10;X = M^A mod P → отправка X&#10;Возведение X в степень второго ключа B:&#10;Y = X^B mod P → отправка Y&#10;Удаление первого ключа:&#10;Z = Y^(A⁻¹) mod P → отправка Z&#10;Удаление второго ключа:&#10;M = Z^(B⁻¹) mod P → получение исходного сообщения" style="font-size: 18px; color: white; margin-bottom: 30px; white-space: normal;" />
+                    <ui:Button name="CloseInfoButton" text="ЗАКРЫТЬ" style="padding: 15px 40px; font-size: 20px; background-color: rgb(97, 223, 235); color: black; border-radius: 8px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

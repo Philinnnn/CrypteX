@@ -1,0 +1,54 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Style>
+        #KeyInput > .unity-text-field__input {
+            background-color: rgba(30, 30, 30, 0.8);
+            color: rgb(97, 235, 97);
+            border-color: rgb(97, 235, 97);
+            border-width: 2px;
+            border-radius: 5px;
+            font-size: 36px;
+            -unity-text-align: middle-center;
+            -unity-font-style: bold;
+            padding: 10px;
+        }
+    </ui:Style>
+    <ui:VisualElement name="Root" style="flex-grow: 1; background-image: url('project://database/Assets/UI/Gameplay/Background.png'); align-items: center; justify-content: center;">
+        <ui:VisualElement name="Tablet" style="flex-grow: 1; background-image: url('project://database/Assets/UI/Gameplay/Tablet.png'); align-items: center; justify-content: center; width: 100%; height: 100%;">
+            <ui:VisualElement name="TabletGameArea" style="flex-grow: 0; align-items: center; justify-content: flex-start; width: 1500px; max-width: 1500px; height: auto; padding: 20px 40px; flex-direction: column; scale: 0.75 0.75;">
+                <ui:Label text="МОДУЛЬ АВТЕНТИФИКАЦИИ: MAC (HMAC)" style="font-size: 28px; color: rgb(97, 235, 97); -unity-font-style: bold; margin-bottom: 20px; letter-spacing: 2px;" />
+                <ui:Button name="InfoButton" text="ОБ АЛГОРИТМЕ" style="padding: 10px 20px; font-size: 16px; background-color: rgb(97, 235, 97); color: black; border-radius: 8px; -unity-font-style: bold; margin-bottom: 10px;" />
+                <ui:Label text="Ввиду уязвимости анализатора (Side-Channel Timing Attack), мы можем определить количество совпавших символов. Введите 5 цифр." style="font-size: 20px; color: rgb(200, 200, 200); -unity-font-style: italic; margin-bottom: 30px;" />
+                <ui:VisualElement style="align-items: center; justify-content: center; background-color: rgba(0,0,0,0.5); padding: 40px; border-radius: 15px; border-width: 2px; border-color: rgb(70, 70, 70); margin-bottom: 30px; width: 100%;">
+                    <ui:Label text="СООБЩЕНИЕ" style="font-size: 18px; color: rgb(150, 150, 150); margin-bottom: 10px;" />
+                    <ui:Label name="MessageLabel" text="DATA_PACKET_#42" style="font-size: 30px; color: white; -unity-font-style: bold; margin-bottom: 20px;" />
+                    <ui:Label text="СЕКРЕТНЫЙ КЛЮЧ" style="font-size: 18px; color: rgb(150, 150, 150); margin-bottom: 10px;" />
+                    <ui:TextField name="KeyInput" text="" max-length="5" style="width: 200px; height: 70px; margin-bottom: 15px;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-around; width: 100%; margin-bottom: 40px;">
+                    <ui:VisualElement style="align-items: center; background-color: rgba(0,0,0,0.5); padding: 30px; border-radius: 15px; border-width: 2px; border-color: rgb(97, 223, 235); width: 45%;">
+                        <ui:Label text="ВЫЧИСЛЕННЫЙ MAC" style="font-size: 16px; color: rgb(150, 150, 150); margin-bottom: 15px;" />
+                        <ui:Label name="CurrentMACLabel" text="-" style="font-size: 40px; color: rgb(235, 97, 97); -unity-font-style: bold; letter-spacing: 5px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="align-items: center; background-color: rgba(0,0,0,0.5); padding: 30px; border-radius: 15px; border-width: 2px; border-color: rgb(97, 235, 97); width: 45%;">
+                        <ui:Label text="ЦЕЛЕВОЙ MAC (СОВПАДЕНИЕ)" style="font-size: 16px; color: rgb(150, 150, 150); margin-bottom: 15px;" />
+                        <ui:Label name="TargetMACLabel" text="-" style="font-size: 40px; color: rgb(97, 235, 97); -unity-font-style: bold; letter-spacing: 5px;" />
+                        <ui:Label name="MatchPercentLabel" text="СОВПАДЕНИЕ: 0%" style="font-size: 20px; color: yellow; margin-top: 10px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="ActionButtons" style="flex-direction: row; justify-content: center; align-items: center; width: 100%;">
+                    <ui:Button name="SubmitButton" text="АВТОРИЗОВАТЬ" style="padding: 15px 45px; font-size: 22px; background-color: rgb(97, 235, 97); color: black; border-radius: 8px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CheatSheetOverlay" style="position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); display: none; align-items: center; justify-content: center; z-index: 100;">
+                <ui:VisualElement style="background-color: rgb(40, 40, 40); border-width: 2px; border-color: rgb(97, 235, 97); border-radius: 15px; padding: 40px; width: 80%; max-width: 1000px; align-items: center;">
+                    <ui:Label text="MAC И ИМИТОВСТАВКА" style="font-size: 24px; color: rgb(97, 235, 97); -unity-font-style: bold; margin-bottom: 20px;" />
+                    <ui:Label text="MAC (Message Authentication Code) — это код проверки подлинности сообщения." style="font-size: 18px; color: rgb(200, 200, 200); margin-bottom: 20px; white-space: normal; -unity-text-align: middle-center;" />
+                    <ui:Label text="СИНХРОНИЗАЦИЯ КЛЮЧА И АТАКА ПО ВРЕМЕНИ" style="font-size: 20px; color: rgb(255, 255, 255); -unity-font-style: bold; margin-bottom: 10px;" />
+                    <ui:Label text="Для MAC требуется секретный ключ. Благодаря уязвимости сервера (Side-Channel Timing Attack), функция сравнения возвращает ответ быстрее или медленнее в зависимости от количества совпавших символов. Используйте это как игру «Wordle»: подберите 5 цифр (от 0 до 9), анализируя ТОЧНОЕ СОВПАДЕНИЕ и ПРИСУТСТВИЕ ЦИФРЫ, НО НА ДРУГОЙ ПОЗИЦИИ (смещено)." style="font-size: 18px; color: rgb(200, 200, 200); margin-bottom: 30px; white-space: normal; -unity-text-align: middle-center;" />
+                    <ui:Button name="CloseInfoButton" text="ПОНЯТНО" style="padding: 15px 40px; font-size: 20px; background-color: rgb(97, 235, 97); color: black; border-radius: 8px; -unity-font-style: bold; margin-top: 10px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
+

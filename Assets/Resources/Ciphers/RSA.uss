@@ -1,0 +1,28 @@
+﻿.input-field > .unity-text-field__input {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: white;
+    border-color: rgb(150, 150, 150);
+    border-width: 2px;
+    border-radius: 5px;
+    font-size: 24px;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    padding: 8px;
+}
+.input-field-secret > .unity-text-field__input {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: yellow;
+    border-color: yellow;
+    border-width: 2px;
+    border-radius: 5px;
+    font-size: 24px;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    padding: 8px;
+}
+.info-label {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+    -unity-font-style: bold;
+}

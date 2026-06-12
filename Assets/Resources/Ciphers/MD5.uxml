@@ -1,0 +1,30 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Gameplay/Ciphers/MD5.uss?fileID=7433441132597879392&amp;guid=67a22c5b17af496bb180ad2e83e0e83b&amp;type=3#MD5"/>
+    <ui:VisualElement name="Root" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Gameplay/Background.png?fileID=-2133662282&amp;guid=b58457c14394ea9439590eeeb6bdabbf&amp;type=3#Background_0&quot;); align-items: center; justify-content: center;">
+        <ui:VisualElement name="Tablet" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Gameplay/Tablet.png?fileID=6063511624963266046&amp;guid=bfe1bd39c35ea6b45ad6ede54d1144ae&amp;type=3#ChatGPT Image 2 февр. 2026 г., 12_00_03_0&quot;); align-items: center; justify-content: center; width: 100%; height: 100%;">
+            <ui:VisualElement name="TabletGameArea" style="flex-grow: 0; align-items: center; justify-content: flex-start; width: 1500px; max-width: 1500px; height: auto; padding: 20px 40px; flex-direction: column; scale: 0.75 0.75;">
+                <ui:Label text="МОДУЛЬ ЦЕЛОСТНОСТИ: АЛГОРИТМ ХЕШИРОВАНИЯ" style="font-size: 28px; color: rgb(97, 235, 97); -unity-font-style: bold; margin-bottom: 20px; letter-spacing: 2px;"/>
+                <ui:Button name="InfoButton" text="ОБ АЛГОРИТМЕ" style="padding: 10px 20px; font-size: 16px; background-color: rgb(97, 235, 97); color: black; border-radius: 8px; -unity-font-style: bold; margin-bottom: 10px;"/>
+                <ui:Label text="Текст приказа был перехвачен и изменен. Восстановите оригинал." style="font-size: 20px; color: rgb(200, 200, 200); -unity-font-style: italic; margin-bottom: 30px;"/>
+                <ui:VisualElement style="align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.5); padding: 40px; border-radius: 15px; border-width: 2px; border-color: rgb(70, 70, 70); margin-bottom: 30px; width: 100%;">
+                    <ui:Label text="ИСХОДНЫЙ ТЕКСТ" style="font-size: 18px; color: rgb(150, 150, 150); margin-bottom: 10px;"/>
+                    <ui:TextField name="InputField" value="" class="cyber-input" style="width: 800px; height: 70px; margin-bottom: 15px;"/>
+                    <ui:Label name="DictionaryLabel" text="ВОЗМОЖНЫЕ ВАРИАНТЫ: ..." style="font-size: 20px; color: rgb(200, 200, 200); -unity-font-style: bold;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-around; width: 100%; margin-bottom: 40px;">
+                    <ui:VisualElement style="align-items: center; background-color: rgba(0, 0, 0, 0.5); padding: 30px; border-radius: 15px; border-width: 2px; border-color: rgb(97, 223, 235); width: 45%;">
+                        <ui:Label text="ВЫЧИСЛЕННЫЙ ХЕШ (ДАЙДЖЕСТ)" style="font-size: 16px; color: rgb(150, 150, 150); margin-bottom: 15px;"/>
+                        <ui:Label name="CurrentHashLabel" text="0000000000000000" style="font-size: 40px; color: rgb(235, 97, 97); -unity-font-style: bold; letter-spacing: 5px;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="align-items: center; background-color: rgba(0, 0, 0, 0.5); padding: 30px; border-radius: 15px; border-width: 2px; border-color: rgb(97, 235, 97); width: 45%;">
+                        <ui:Label text="ЦЕЛЕВОЙ ХЕШ (ОРИГИНАЛ)" style="font-size: 16px; color: rgb(150, 150, 150); margin-bottom: 15px;"/>
+                        <ui:Label name="TargetHashLabel" text="[CALCULATING]" style="font-size: 40px; color: rgb(97, 235, 97); -unity-font-style: bold; letter-spacing: 5px;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="ActionButtons" style="flex-direction: row; justify-content: center; align-items: center; width: 100%;">
+                    <ui:Button name="SubmitButton" text="ПОДТВЕРДИТЬ ЦЕЛОСТНОСТЬ" style="padding: 15px 45px; font-size: 22px; background-color: rgb(97, 235, 97); color: black; border-radius: 8px; -unity-font-style: bold;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

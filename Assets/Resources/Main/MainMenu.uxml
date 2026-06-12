@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 1; align-items: center; justify-content: center;">
+        <ui:VisualElement name="VideoBackground" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; -unity-background-scale-mode: scale-and-crop;" />
+        <ui:Image source="project://database/Assets/UI/Menu/Logo.png?fileID=-1692289711969884086&amp;guid=c5334f8f511eab14cb3d086860219921&amp;type=3#ChatGPT Image 3 С„РРІСЂ. 2026 Рі., 17_48_57_0" name="Logo" style="justify-content: center; align-items: auto; align-content: auto; top: auto; margin-bottom: 5px; height: 423px; width: 1454px;"/>
+        <ui:VisualElement name="Buttons" style="flex-grow: 1; align-items: center; justify-content: flex-start; align-content: auto; margin-top: 0; width: auto; height: auto;">
+            <ui:Button text="" icon-image="" name="StartButton" style="height: 80px; width: 400px; margin-top: 7px; margin-bottom: 7px; background-image: url(&quot;project://database/Assets/UI/Menu/Menu_Buttons_Tilemap.png?fileID=-434607017327971389&amp;guid=d574efc184805a249b5d7eff1d1260b1&amp;type=3#ChatGPT_Image_3_С„РРІСЂ._2026_Рі.__16_18_36-removebg-preview_0&quot;); align-items: auto; align-content: auto;"/>
+            <ui:Button text="" name="ContinueButton" style="height: 80px; width: 400px; margin-top: 7px; margin-bottom: 7px; background-image: url(&quot;project://database/Assets/UI/Menu/Menu_Buttons_Tilemap.png?fileID=3167482666798002643&amp;guid=d574efc184805a249b5d7eff1d1260b1&amp;type=3#ChatGPT_Image_3_С„РРІСЂ._2026_Рі.__16_18_36-removebg-preview_1&quot;); align-items: auto; align-content: auto;"/>
+            <ui:Button text="" name="ChooseLevelButton" style="height: 80px; width: 400px; margin-top: 7px; margin-bottom: 7px; background-image: url(&quot;project://database/Assets/UI/Menu/Menu_Buttons_Tilemap.png?fileID=4104881231352211272&amp;guid=d574efc184805a249b5d7eff1d1260b1&amp;type=3#ChatGPT_Image_3_С„РРІСЂ._2026_Рі.__16_18_36-removebg-preview_3&quot;); align-items: auto; align-content: auto; justify-content: center;"/>
+            <ui:Button text="" name="ExitButton" style="height: 80px; width: 400px; margin-top: 7px; margin-bottom: 7px; background-image: url(&quot;project://database/Assets/UI/Menu/Menu_Buttons_Tilemap.png?fileID=-7186994859354041843&amp;guid=d574efc184805a249b5d7eff1d1260b1&amp;type=3#ChatGPT_Image_3_С„РРІСЂ._2026_Рі.__16_18_36-removebg-preview_4&quot;); align-items: auto; align-content: auto;"/>
+        </ui:VisualElement>
+        <ui:Button name="SettingsButton" text="⚙" style="position: absolute; left: 20px; bottom: 20px; width: 48px; height: 48px; font-size: 32px; -unity-text-align: middle-center; background-color: rgb(5, 5, 10); color: #39ff14; border-radius: 10px; border-width: 2px; border-color: #ff073a; -unity-font-style: bold; padding: 0;" />
+        <ui:VisualElement name="SettingsPanel" style="position: absolute; left: 50%; top: 50%; margin-left: -250px; margin-top: -150px; width: 500px; height: 300px; background-color: rgb(5, 5, 10); padding: 30px; border-radius: 15px; border-width: 3px; border-color: #39ff14; display: none; flex-direction: column; justify-content: center;">
+            <ui:Label text="НАСТРОЙКИ" style="color: #ff073a; font-size: 36px; -unity-font-style: bold; margin-bottom: 40px; -unity-text-align: middle-center;" />
+            <ui:VisualElement style="flex-direction: row; align-items: center; margin-bottom: 40px; justify-content: space-between;">
+                <ui:Label text="Музыка" style="color: #39ff14; width: 180px; font-size: 24px; -unity-font-style: bold;" />
+                <ui:Slider name="BGMSlider" low-value="0" high-value="1" value="1" style="flex-grow: 1; height: 30px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-between;">
+                <ui:Label text="Звуковые эффекты" style="color: #ff073a; width: 180px; font-size: 18px; -unity-font-style: bold; white-space: normal;" />
+                <ui:Slider name="SFXSlider" low-value="0" high-value="1" value="1" style="flex-grow: 1; height: 30px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

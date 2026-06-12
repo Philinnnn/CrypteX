@@ -1,0 +1,42 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Gameplay/Background.png?fileID=-2133662282&amp;guid=b58457c14394ea9439590eeeb6bdabbf&amp;type=3#Background_0&quot;); align-items: center; justify-content: center;">
+        <ui:VisualElement name="Tablet" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Gameplay/Tablet.png?fileID=6063511624963266046&amp;guid=bfe1bd39c35ea6b45ad6ede54d1144ae&amp;type=3#ChatGPT Image 2 февр. 2026 г., 12_00_03_0&quot;); align-items: center; justify-content: center; width: 100%; height: 100%; max-width: 1920px; max-height: 1080px;">
+            <ui:VisualElement name="TabletGameArea" style="flex-grow: 1; width: 100%; height: 70%; padding: 40px; align-items: center; justify-content: center; flex-direction: row; position: relative; max-height: 70%;">
+                <ui:VisualElement name="LeftContainer" style="flex-basis: 35%; align-items: center; justify-content: center; height: 100%;">
+                    <ui:VisualElement name="LampContainer" style="width: 300px; height: 300px; align-items: center; justify-content: center;">
+                        <ui:VisualElement name="LampImage" style="width: 100%; height: 100%; -unity-background-scale-mode: scale-to-fit;"/>
+                    </ui:VisualElement>
+                    <ui:Label name="SignalLabel" text="" style="font-size: 48px; color: rgb(255, 200, 100); -unity-font-style: bold; margin-top: 20px; min-height: 60px; display: none;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="RightContainer" style="flex-basis: 65%; align-items: center; justify-content: space-between; height: 80%; padding-left: 0; margin-left: -51px; padding-top: 20px; position: relative;">
+                    <ui:VisualElement name="ContentWrapper" style="width: 100%; align-items: center; justify-content: center; flex-grow: 1;">
+                        <ui:VisualElement name="InputContainer" style="align-items: center; justify-content: center; margin-bottom: 20px; width: 100%;">
+                            <ui:Label text="ВВЕДИТЕ ОТВЕТ:" style="font-size: 18px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-bottom: 5px;"/>
+                            <ui:Label name="AnswerText" text="" style="font-size: 42px; color: rgb(97, 223, 235); -unity-font-style: bold; border-bottom-width: 2px; border-bottom-color: rgb(97, 223, 235); min-width: 300px; -unity-text-align: middle-center; letter-spacing: 5px;"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="ControlsContainer" style="width: 100%; align-items: center;">
+                            <ui:VisualElement name="KeyboardContainer" style="flex-direction: row; flex-wrap: wrap; justify-content: center; width: 100%; margin-bottom: 20px;"/>
+                            <ui:VisualElement name="ActionButtons" style="flex-direction: row; justify-content: center;">
+                                <ui:Button name="DeleteButton" text="← СТЕРЕТЬ" style="padding: 10px 20px; margin-right: 15px; background-color: rgb(200, 100, 100); color: white; font-size: 18px; border-radius: 8px;"/>
+                                <ui:Button name="SubmitButton" text="ОТПРАВИТЬ" style="padding: 10px 30px; background-color: rgb(97, 223, 235); color: black; font-size: 18px; -unity-font-style: bold; border-radius: 8px;"/>
+                                <ui:Button name="ReplayButton" text="ПОВТОРИТЬ" style="padding: 10px 20px; margin-left: 15px; background-color: rgb(255, 200, 100); color: black; font-size: 18px; border-radius: 8px;"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="HeaderControls" picking-mode="Ignore" style="flex-direction: row; justify-content: flex-end; position: absolute; top: 25%; right: 5%; z-index: 2000; align-items: flex-end; align-self: auto; align-content: flex-start;">
+                <ui:Button name="InfoButton" picking-mode="Pick" text="?" style="width: 60px; height: 60px; font-size: 32px; border-radius: 30px; background-color: rgb(97, 223, 235); color: black; -unity-font-style: bold; border-width: 2px; border-color: white; align-items: auto; align-self: auto; margin-right: 0; align-content: auto;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="CheatSheetOverlay" style="position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); display: none; align-items: center; justify-content: center; z-index: 100;">
+                <ui:VisualElement style="background-color: rgb(40, 40, 40); border-width: 2px; border-color: rgb(97, 223, 235); border-radius: 15px; padding: 30px; width: 90%; height: 90%; max-width: 800px;">
+                    <ui:Label text="ТАБЛИЦА КОДОВ МОРЗЕ" style="font-size: 28px; color: rgb(97, 223, 235); -unity-font-style: bold; align-self: center; margin-bottom: 20px;"/>
+                    <ui:ScrollView style="flex-grow: 1; width: 100%;">
+                        <ui:VisualElement name="CheatSheetTable" style="flex-direction: row; flex-wrap: wrap; justify-content: center;"/>
+                    </ui:ScrollView>
+                    <ui:Button name="CloseInfoButton" text="ЗАКРЫТЬ" style="margin-top: 20px; padding: 10px 40px; align-self: center; background-color: rgb(97, 223, 235); color: black; font-size: 20px; -unity-font-style: bold; border-radius: 8px;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

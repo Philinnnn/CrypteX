@@ -1,0 +1,37 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 1; background-image: url('project://database/Assets/UI/Gameplay/Background.png'); align-items: center; justify-content: center;">
+        <ui:VisualElement name="Tablet" style="flex-grow: 1; background-image: url('project://database/Assets/UI/Gameplay/Tablet.png'); align-items: center; justify-content: center; width: 100%; height: 100%; max-width: 1920px; max-height: 1080px;">
+            <ui:VisualElement name="TabletGameArea" style="flex-grow: 0; align-items: center; justify-content: flex-start; width: 1500px; max-width: 1500px; height: auto; padding: 50px 40px; flex-direction: column; margin-top: -2%;">
+                
+                <ui:Label text="ОДНОРАЗОВЫЙ БЛОКНОТ (ВЕРНАМА)" style="font-size: 28px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-bottom: 20px; letter-spacing: 2px;" />
+                
+                <ui:Button name="InfoButton" text="ПОДСКАЗКА (НОМЕРА)" style="padding: 10px 20px; font-size: 16px; background-color: rgb(97, 223, 235); color: black; border-radius: 8px; -unity-font-style: bold; margin-bottom: 30px;" />
+
+                <ui:ScrollView style="width: 100%; max-height: 350px; margin-bottom: 30px; background-color: rgba(0, 0, 0, 0.3); border-radius: 10px; padding: 20px;">
+                    <ui:VisualElement name="TapeContainer" style="flex-direction: row; align-items: flex-start; justify-content: center; width: 100%; flex-wrap: wrap;" />
+                </ui:ScrollView>
+
+                <ui:Label name="InputLabel" text="ЛОГ РАСШИФРОВКИ / ОТВЕТ:" style="font-size: 18px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-bottom: 5px;" />
+                <ui:Label name="AnswerText" style="font-size: 42px; color: rgb(97, 223, 235); -unity-font-style: bold; letter-spacing: 5px; margin-bottom: 20px; min-height: 50px; border-bottom-width: 2px; border-bottom-color: rgb(97, 223, 235); min-width: 500px; -unity-text-align: middle-center;" />
+
+                <ui:VisualElement name="ActionButtons" style="flex-direction: row; justify-content: center; align-items: center; width: 100%;">
+                    <ui:Button name="DeleteButton" text="← СТЕРЕТЬ" style="padding: 15px 35px; font-size: 20px; background-color: rgb(200, 100, 100); color: white; border-radius: 8px; -unity-font-style: bold; margin-right: 20px;" />
+                    <ui:Button name="SubmitButton" text="ОТПРАВИТЬ" style="padding: 15px 45px; font-size: 22px; background-color: rgb(97, 223, 235); color: black; border-radius: 8px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+
+            <ui:VisualElement name="CheatSheetOverlay" style="position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); display: none; align-items: center; justify-content: center; z-index: 100;">
+                <ui:VisualElement style="background-color: rgb(40, 40, 40); border-width: 2px; border-color: rgb(97, 223, 235); border-radius: 15px; padding: 40px; width: 80%; max-width: 1000px; align-items: center;">
+                    <ui:Label text="НОМЕРА АЛФАВИТА (ДЛЯ ВЫЧИСЛЕНИЯ)" style="font-size: 28px; color: rgb(97, 223, 235); -unity-font-style: bold; margin-bottom: 20px;" />
+                    <ui:Label text="Текст = (Шифр - Ключ) mod 26" style="font-size: 22px; color: rgb(255, 200, 100); -unity-font-style: italic; margin-bottom: 30px;" />
+                    
+                    <ui:Label text="A=0 B=1 C=2 D=3 E=4 F=5 G=6 H=7 I=8 J=9 K=10 L=11 M=12" style="font-size: 24px; color: white; margin-bottom: 10px; letter-spacing: 2px;" />
+                    <ui:Label text="N=13 O=14 P=15 Q=16 R=17 S=18 T=19 U=20 V=21 W=22 X=23 Y=24 Z=25" style="font-size: 24px; color: white; margin-bottom: 30px; letter-spacing: 2px;" />
+
+                    <ui:Button name="CloseInfoButton" text="ПОНЯТНО" style="padding: 15px 40px; background-color: rgb(97, 223, 235); color: black; font-size: 20px; -unity-font-style: bold; border-radius: 8px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
