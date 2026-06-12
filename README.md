@@ -35,7 +35,7 @@
 
 ```
 Assets/Scripts/
-├── Managers/https://github.com/Philinnnn/CrypteX
+├── Managers/
 │   ├── GameManager        # состояние игры (меню, игра, пауза), сохранение конфигурации
 │   ├── LevelManager        # система уровней, загадки (шифротекст/ответ/ключ) для каждого уровня
 │   ├── DialogueManager      # система диалогов
